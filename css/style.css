@@ -14,11 +14,19 @@ body{
     margin: 0 auto;
 }
 
+#button{
+    padding: 0 20px;
+    height: 19px;
+    margin-top: 26px;
+}
+
 header{
 height: 70px;
 padding: 0 20px;
 line-height: 70px;
 background-color: white;
+display: flex; 
+justify-content: space-between;
 }
 
 #grid{
@@ -33,4 +41,9 @@ background-color: white;
     height: calc(100% / 10);
     width: calc(100% / 10);
     border: 2px solid black;
+    cursor: pointer;
 } 
+
+#grid .cell.clicked {
+    background-color: dodgerblue;
+}
