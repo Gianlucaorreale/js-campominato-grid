@@ -25,5 +25,12 @@ background-color: white;
     width: 500px;
     height: 500px;
     margin: 60px auto;
-    border: 2px dashed black;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+#grid .cell{
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+    border: 2px solid black;
+} 
