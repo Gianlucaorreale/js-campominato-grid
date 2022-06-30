@@ -14,6 +14,15 @@ In ogni cella, deve comparire il numero corrispondente, in ordine da 1 a 100;
 #MILESTONE 4
 Al click sulla cella, stampiamo il numero della cella cliccata in console, poi coloriamo la cella d'azzurro!*/
 
+
+const createCell = content => {
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    cell.innerText = content;
+    return cell;  
+}
+
+
 const grid = document.getElementById('grid');
 const rows = 10;
 const cells = 10;
@@ -23,11 +32,16 @@ const totalCells = rows * cells
 
 
 button.addEventListener('click' , function(){
+
     const button = document.getElementById('button');
-    for(let i = 0; i < totalCells; i++){
-        const cell = document.createElement('div');
-        cell.className = 'cell' 
-        grid.appendChild(cell);
+    for(let i = 1; i <= totalCells; i++){
+        const newCell = createCell(i);
+
+        newCell.addEventListener('click', function(){
+        newCell.classList.toggle('clicked');
+        })
+          
+         grid.appendChild(newCell);
     }
 })
 
